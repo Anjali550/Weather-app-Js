@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="left">
+        <nav>
+          <input type="text" id="myInput" placeholder="Search for places" />
+          <!-- <button>Search for places</button> -->
+          <img
+            src="https://weather-z-app.vercel.app/assets/my_location_FILL0_wght400_GRAD0_opsz48-db56495f.svg"
+            alt="location"
+            class="logo"
+          />
+        </nav>
+        <div class="first">
+          <img class="shower" src="Shower.png" width="30%" />
+        </div>
+        <div class="second" id="second">
+          <p id="temP">15<span>&deg;C</span></p>
+          <!-- <p id="temP">15&deg;C</p> -->
+          <p id="cloud">Shower</p>
+          <p id="dateDisplay">today Thu jul 20</p>
+          <div class="loc">
+            <img
+              width="7%"
+              src="https://weather-z-app.vercel.app/assets/location_on_FILL0_wght400_GRAD0_opsz48-121db68b.svg"
+            />
+            <p id="city">Helsinki</p>
+          </div>
+        </div>
+      </section>
+      <section class="right">
+        <header>
+          <button>&deg;C</button>
+          <button>&deg;F</button>
+        </header>
+        <div class="card"></div>
+        <div class="today">
+          <h1>Today's Highlights</h1>
+          <div class="card2"></div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
