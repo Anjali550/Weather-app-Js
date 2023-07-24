@@ -6,6 +6,7 @@ inputElement.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     const cityName = event.target.value;
     getWeather(cityName);
+    getDaily(cityName);
   }
 });
 
@@ -13,7 +14,7 @@ inputElement.addEventListener("keydown", function(event) {
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
         .then(data => {return data.json()})
         .then(result => {
-          console.log(result);
+          // console.log(result);
           let tempH = document.getElementById("temP");
           tempH.innerText=Math.floor(result.main.temp/10)+"°C";
           let cloudH = document.getElementById("cloud");
@@ -28,23 +29,25 @@ inputElement.addEventListener("keydown", function(event) {
             <div class="cards2">
               <h3>Wind status</h3>
               <p><span id="status">${Math.floor(result.wind.speed)}</span>mph</p>
+              <i class="fa-solid fa-play" style="color: #586d93;"></i>
             </div>
             <div class="cards2">
               <h3>Humidity</h3>
               <p><span id="status">${result.main.humidity}</span>%</p>
               <input type="range" id="rangeValue" name="rangeValue" min="0" max="100" step="1" value="50">
             </div>
-           </div>
+          </div>
             <div class="card-second">
               <div class="cards2">
                 <h3>visibility</h3>
-                <p><span id="status">${Math.round(result.visibility / 1609)}</span>miles</p>
+                <p><span id="status">${Math.round(result.visibility / 1609)} </span>miles</p>
               </div>
               <div class="cards2">
                 <h3>Air Pressure</h3>
-                <p><span id="status">${result.main.pressure}</span>mb</p>
+                <p><span id="status">${result.main.pressure} </span>mb</p>
               </div>
             </div>
+            
           `
           
         })
@@ -67,12 +70,12 @@ dateDisplayElement.innerText = formattedDate;
 
 // for next 5 days forecast
 let getDaily = (cityName) => {
-  // fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=6&units=metric&appid=${apiId}`)
-  // fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`)
-  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},{state code},{country code}&limit={limit}&appid={apiKey}`)
-      .then(res => { return res.json() })
+ 
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`)
+  .then(res => { return res.json() })
       .then(result => {
-        for(let i=1; i<result.list.length; i++){
+        console.log(result.list[1]);
+        for(let i=1; i < result.list.length-34; i++){
           let cardsDiv = document.querySelector(".card");
           cardsDiv.innerHTML +=`
           <div class="cards">
