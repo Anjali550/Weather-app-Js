@@ -47,26 +47,31 @@ button {
   background-color: #79798e;
   border: none;
 }
+#btn{
+  padding:.6rem 1rem;
+}
 
-input[type="text"] {
+input[type="text"]::-ms-input-placeholder{
   background-color: #79798e;
   color: #fff;
   border: none !important;
-  /* padding: 0.5rem; */
+  padding: 0.5rem;
   width: 150px;
-}
+} 
 
 input::placeholder {
   color: #fff;
-  border: 0;
+  border:1px solid #a5a5ba;
+  background-color: #a5a5ba;
 }
-input[type="text"]::placeholder {
+/* input[type="text"]::placeholder {
   border: none !important;
-}
+  background-color: #a5a5ba;
+} */
 .search>p{
   margin-top: 2rem;
   color: #e6dcdc;
-  padding: .5rem 1rem;
+  padding: .5rem 1.7rem;
   font-family: sans-serif;
   font-weight: 300;
   font-size: 17px;
@@ -76,6 +81,10 @@ input[type="text"]::placeholder {
 }
 #btn{
   background-color: #2929f1;
+}
+.search-2{
+  /* margin: 0 auto; */
+  padding-left: 1.3rem;
 }
 
 /*-------------- left-section----------- */
@@ -104,7 +113,7 @@ nav {
   background: url(Cloud-background.png);
   background-position: center;
   background-size: cover;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,7 +193,7 @@ header button {
   font-size: 0.8rem;
 }
 .today {
- 
+ margin-top: 2rem;
   color: #fff;
 }
 .card2 {
@@ -192,11 +201,12 @@ header button {
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin:.8rem 0;
 }
 .card-first {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   flex-wrap: wrap;
 }
 .card-second {
@@ -289,7 +299,8 @@ for responsive
     margin: 1rem auto;
   }
   .today {
-    text-align: center;
+    text-align:left;
+    /* padding:2rem 0 1rem 2rem; */
   }
   .card-first {
     display: flex;
@@ -303,8 +314,8 @@ for responsive
     /* margin: auto; */
   }
   .cards2 {
-    width: 90%;
-    margin: 5px;
+    width: 100%;
+    margin: 10px auto;
   }
 }
 @media only screen and (max-width: 395px) {
@@ -339,6 +350,22 @@ for responsive
     margin: 0;
   }
   .right{
-    padding: 1rem;
+    padding: 1rem 3rem;
   }
+  .today h1{
+    padding-left: .5rem;
+  }
+  .first {
+    height: 60%;
+    
+  }
+  
+  .second {
+    padding-top: 2rem;
+   
+  
+  }
+  
+ 
+  
 }
