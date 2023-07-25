@@ -1,127 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-    <title>Document</title>
-  </head>
-  <body>
-    <main class="container">
-      <section class="left">
-        <nav>
-          <!-- <input type="text" id="myInput" placeholder="Search for places" /> -->
-          <button>Search for places</button>
-          <img
-            src="https://weather-z-app.vercel.app/assets/my_location_FILL0_wght400_GRAD0_opsz48-db56495f.svg"
-            alt="location"
-            class="logo"
-          />
-        </nav>
-        <div class="first">
-          <img class="shower" src="Shower.png" width="30%" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="container">
+    <section id="btn1" class="search">
+      <i class="fa-solid fa-xmark fa-xl"  onclick= searchSection() style="color: #acbfdf;"></i>
+      <div class="search-2">
+        <button>
+          <i class="fa-solid fa-magnifying-glass " style="color: #d5d9e2;"></i>
+          <input type="text" id="myInput" placeholder="Search location" />
+        </button>
+
+        <button id="btn" onclick="onSearch()">Search</button>
+      </div>
+      <p onclick="citySearch(this)">London</p>
+      <p onclick="citySearch(this)">Delhi</p>
+      <p onclick="citySearch(this)">Noida</p>
+
+
+    </section>
+    <section id="btn2" class="left">
+      <nav>
+
+        <button  onclick= searchSection2()>Search for places</button>
+        <img src="https://weather-z-app.vercel.app/assets/my_location_FILL0_wght400_GRAD0_opsz48-db56495f.svg"
+          alt="location" class="logo" />
+      </nav>
+      <div class="first">
+        <img class="shower" src="Shower.png" width="30%" />
+      </div>
+      <div class="second" id="second">
+        <p id="temP">15<span>&deg;C</span></p>
+        <!-- <p id="temP">15&deg;C</p> -->
+        <p id="cloud">Shower</p>
+        <p id="dateDisplay">today Thu jul 20</p>
+        <div class="loc">
+          <img width="7%"
+            src="https://weather-z-app.vercel.app/assets/location_on_FILL0_wght400_GRAD0_opsz48-121db68b.svg" />
+          <p id="city">Helsinki</p>
         </div>
-        <div class="second" id="second">
-          <p id="temP">15<span>&deg;C</span></p>
-          <!-- <p id="temP">15&deg;C</p> -->
-          <p id="cloud">Shower</p>
-          <p id="dateDisplay">today Thu jul 20</p>
-          <div class="loc">
-            <img
-              width="7%"
-              src="https://weather-z-app.vercel.app/assets/location_on_FILL0_wght400_GRAD0_opsz48-121db68b.svg"
-            />
-            <p id="city">Helsinki</p>
-          </div>
-        </div>
-      </section>
-      <section class="right">
-        <header>
-          <button>&deg;C</button>
-          <button>&deg;F</button>
-        </header>
-        <div class="card">
-          <div class="cards">
-            <p>Tomorrow</p>
-            <img src="LightCloud.png" width="80px"/>
-           <div class="temp">
+      </div>
+    </section>
+    <section class="right">
+      <header>
+        <button>&deg;C</button>
+        <button>&deg;F</button>
+      </header>
+      <div class="card">
+        <div class="cards">
+          <p>Tomorrow</p>
+          <img src="LightCloud.png" width="80%" />
+          <div class="temp">
             <p><span class="Rtext">45</span><span> &deg;C</span></p>
             <p>34</span><span> &deg;C</span></p>
-           </div>
           </div>
-          <div class="cards">
-            <p>Thu jul 23</p>
-            <img src="LightCloud.png" width="80%"/>
-           <div class="temp">
+        </div>
+        <div class="cards">
+          <p>Thu jul 23</p>
+          <img src="LightCloud.png" width="80%" />
+          <div class="temp">
             <p><span class="Rtext">30</span><span> &deg;C</span></p>
             <p>30</span><span> &deg;C</span></p>
-           </div>
           </div>
-          <div class="cards">
-            <p>Thu jul 24</p>
-            <img src="LightCloud.png" width="80%"/>
-           <div class="temp">
+        </div>
+        <div class="cards">
+          <p>Thu jul 24</p>
+          <img src="LightCloud.png" width="80%" />
+          <div class="temp">
             <p><span class="Rtext">30</span><span> &deg;C</span></p>
             <p>30</span><span> &deg;C</span></p>
-           </div>
           </div>
-          <div class="cards">
-            <p>Thu jul 25</p>
-            <img src="LightCloud.png" width="80%"/>
-           <div class="temp">
+        </div>
+        <div class="cards">
+          <p>Thu jul 25</p>
+          <img src="LightCloud.png" width="80%" />
+          <div class="temp">
             <p><span class="Rtext">30</span><span> &deg;C</span></p>
             <p>30</span><span> &deg;C</span></p>
-           </div>
           </div>
-          <div class="cards">
-            <p>Thu jul 26</p>
-            <img src="LightCloud.png" width="80%"/>
-           <div class="temp">
+        </div>
+        <div class="cards">
+          <p>Thu jul 26</p>
+          <img src="LightCloud.png" width="80%" />
+          <div class="temp">
             <p><span class="Rtext">30</span> &deg;C</p>
             <p>30</span><span> &deg;C</span></p>
-           </div>
           </div>
-          
         </div>
-        <div class="today">
-          <h1>Today's Highlights</h1>
-          <div class="card2">
-            <div class="card-first">
-              <div class="cards2">
-                <h3>Wind status</h3>
-                <p><span id="status">12</span>mph</p>
-                <div class="wind-logo">
-                  <i class="fa-solid fa-play" style="color: #293751;"> </i>
-                  <p id="wind-t">wsw</p>
-                </div>
-              </div>
-              <div class="cards2">
-                <h3>Humidity</h3>
-                <p><span id="status">34</span>%</p>
-                <input type="range" id="rangeValue" name="rangeValue" min="0" max="100" step="1" value="50">
+
+      </div>
+      <div class="today">
+        <h1>Today's Highlights</h1>
+        <div class="card2">
+          <div class="card-first">
+            <div class="cards2">
+              <h3>Wind status</h3>
+              <p><span id="status">12</span>mph</p>
+              <div class="wind-logo">
+                <i class="fa-solid fa-play" style="color: #293751;"> </i>
+                <p id="wind-t">wsw</p>
               </div>
             </div>
-              <div class="card-second">
-                <div class="cards2">
-                  <h3>visibility</h3>
-                  <p><span id="status">70</span>miles</p>
-                </div>
-                <div class="cards2">
-                  <h3>Air Pressure</h3>
-                  <p><span id="status">567</span>mb</p>
-                </div>
-              </div>
+            <div class="cards2">
+              <h3>Humidity</h3>
+              <p><span id="status">34</span>%</p>
+              <input type="range" id="rangeValue" name="rangeValue" min="0" max="100" step="1" value="50">
+            </div>
+          </div>
+          <div class="card-second">
+            <div class="cards2">
+              <h3>visibility</h3>
+              <p><span id="status">70</span>miles</p>
+            </div>
+            <div class="cards2">
+              <h3>Air Pressure</h3>
+              <p><span id="status">567</span>mb</p>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>

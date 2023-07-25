@@ -11,22 +11,34 @@
   font-family: sans-serif;
   display: flex;
   margin: 0 auto;
+  cursor: pointer;
 }
-.left {
+
+/* ---------------
+----section----
+--------------- */
+
+
+/*-------------- search-section----------- */
+.search{
+  /* display: block; */
+  display: none;
+  /* background-color: #3a3a77; */
   background-color: #1f1f36;
   width: 40%;
-  height: 100%;
+  height: 100vh;
 }
-nav {
-  /* display: flex; */
-  justify-content: space-between;
-  padding: 1rem;
+.search > .fa-xmark{
+ 
+  display: flex;
+justify-content: right;
+  color:#a5a5ba;
+  padding:2rem 1rem 2rem 0;
+  
+
 }
-.logo {
-  float: right;
-  border-radius: 50%;
-  background-color: #79798e;
-  width: 10%;
+.fa-magnifying-glass{
+  color:#e7e7f1;
 }
 button {
   padding: 0.5rem 1rem;
@@ -39,14 +51,53 @@ button {
 input[type="text"] {
   background-color: #79798e;
   color: #fff;
-  border: none;
-  padding: 0.5rem;
-  width: 120px;
+  border: none !important;
+  /* padding: 0.5rem; */
+  width: 150px;
 }
 
 input::placeholder {
   color: #fff;
+  border: 0;
 }
+input[type="text"]::placeholder {
+  border: none !important;
+}
+.search>p{
+  margin-top: 2rem;
+  color: #e6dcdc;
+  padding: .5rem 1rem;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+.search>p:hover{
+  border:1px solid #e6dcdc;
+}
+#btn{
+  background-color: #2929f1;
+}
+
+/*-------------- left-section----------- */
+.left {
+  /* display: none; */
+  display: block;
+  background-color: #1f1f36;
+  width: 40%;
+  height: 100vh;
+}
+nav {
+ 
+  justify-content: space-between;
+  padding: 1rem;
+}
+.logo {
+  float: right;
+  border-radius: 50%;
+  background-color: #79798e;
+  width: 10%;
+}
+
 
 .first {
   height: 40%;
@@ -63,42 +114,38 @@ input::placeholder {
 .second {
   align-items: center;
   text-align: center;
-  height: auto;
+
 }
 .second p {
   padding: 1rem 0;
   color: #f0f8ff;
-  /* margin:auto; */
+
 }
 .second p:first-child {
   padding: 1rem 0;
   color: #f0f8ff;
   font-size: 4rem;
 }
-/* #temp{
-    margin:0 auto;
-    text-align: center;
-} */
+
 .ltext {
   font-size: 5rem;
 }
 .loc {
   padding-top: 3rem;
-  /* margin-top: 2rem; */
+ 
   display: flex;
   justify-content: center;
 }
-/* -------------------
----Section-right---
-------------------- */
+
+/* ----------------------Section-right---------------------- */
+
 .right {
   background-color: rgb(8, 8, 29);
-  /* width:100%; */
+ 
   padding: 1rem 6rem;
 }
 header {
-  /* padding:1rem 6rem; */
-  /* float: right; */
+ 
   display: flex;
   justify-content: right;
 }
@@ -108,18 +155,19 @@ header button {
   border-radius: 60%;
 }
 .card {
-  /* padding:1rem 6rem; */
+
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
+ 
 }
 .cards {
   text-align: center;
   background-color: #1f1f36;
-  /* width:16%; */
+ 
   padding: 1rem;
   color: #a5a5ba;
-  /* justify-content: space-between; */
+  margin:0 10px 0 0;
+
 }
 .cards p:first-child {
   font-size: 0.9rem;
@@ -136,7 +184,7 @@ header button {
   font-size: 0.8rem;
 }
 .today {
-  /* padding:0rem 6rem;   */
+ 
   color: #fff;
 }
 .card2 {
@@ -176,7 +224,7 @@ header button {
   /* padding-top: rem; */
   font-size: 2.6rem;
 }
-.fa-solid {
+.wind-logo >.fa-solid {
   background-color: #79798e;
   border-radius: 50%;
   padding: 3px 5px;
@@ -186,7 +234,7 @@ header button {
   justify-content: center;
   align-items: center;
   margin-bottom: 0.8rem;
-  /* justify-content: space-between; */
+
 }
 #wind-t {
   padding: 0 0.5rem;
@@ -194,7 +242,12 @@ header button {
   font-size: 15px;
 }
 
-/* for responsive */
+ 
+/* --------------
+for responsive
+--------------  */
+
+
 @media only screen and (max-width: 900px) {
   .logo {
     display: none;
@@ -221,15 +274,18 @@ header button {
     /* height:100vh; */
     height: auto;
   }
+  .search{
+    width: 100%;
+    height:100vh;
+    /* height: auto; */
+  }
   .card {
-    /* display: flex;
-        flex-direction: column;
-        margin: 1rem auto; */
+ 
     flex-wrap: wrap;
   }
 
   .cards {
-    /* width:20%; */
+   
     margin: 1rem auto;
   }
   .today {
@@ -258,23 +314,31 @@ header button {
   .card {
     display: grid;
     grid-template-columns: repeat(2, auto);
+   
     gap: 10px;
   }
+  
   .cards img {
     width: 80px;
   }
-  .left {
-    height: auto;
-  }
-  .right {
-    height: auto;
-    /* border:2px solid white; */
-  }
-  .second {
-    height: auto;
-    /* border: 2px solid red; */
-  }
+
+.left{
+  padding-bottom: 10rem;
+  height:100vh;
+
+}
+.search{
+  height:100%;
+  padding-bottom: 22rem;
+}
+
+
+
+  
   .card-first {
     margin: 0;
+  }
+  .right{
+    padding: 1rem;
   }
 }
