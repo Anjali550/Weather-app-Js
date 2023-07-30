@@ -12,7 +12,11 @@
 </head>
 
 <body>
-  <main class="container">
+ 
+  
+
+  <main id="cont" class="container">
+    <div class="loader"></div>
     <section id="btn1" class="search">
       <i class="fa-solid fa-xmark fa-xl"  onclick= searchSection() style="color: #acbfdf;"></i>
       <div class="search-2">
@@ -37,10 +41,11 @@
           alt="location" class="logo" />
       </nav>
       <div class="first">
-        <img class="shower" src="Shower.png" width="30%" />
+        <img class="shower" src="Shower.png"  />
+        <img class="cloudB" src="Cloud-background.png" alt="" srcset="">
       </div>
       <div class="second" id="second">
-        <p id="temP">15<span>&deg;C</span></p>
+        <p  id="temP"><span>15</span>&deg;C</p>
         <!-- <p id="temP">15&deg;C</p> -->
         <p id="cloud">Shower</p>
         <p id="dateDisplay">today Thu jul 20</p>
@@ -51,10 +56,10 @@
         </div>
       </div>
     </section>
-    <section class="right">
+    <section id="rightt" class="right">
       <header>
-        <button>&deg;C</button>
-        <button>&deg;F</button>
+        <button onclick=getCelcious() >&deg;C</button>
+        <button onclick=getFarh() >&deg;F</button>
       </header>
       <div class="card">
         <div class="cards">
@@ -99,7 +104,7 @@
         </div>
 
       </div>
-      <div class="today">
+      <div id= "today" class="today">
         <h1>Today's Highlights</h1>
         <div class="card2">
           <div class="card-first">
@@ -114,7 +119,17 @@
             <div class="cards2">
               <h3>Humidity</h3>
               <p><span id="status">34</span>%</p>
-              <input type="range" id="rangeValue" name="rangeValue" min="0" max="100" step="1" value="34">
+              <!-- <input type="range" id="rangeValue" name="rangeValue" min="0" max="100" step="1" value="34"> -->
+            <div class="rge">
+              <div class="upper">
+                <p id="rge-text">0</p>
+                <p id="rge-text">50</p>
+                <p id="rge-text">100</p>
+              </div>
+              <div class="progress-bar">
+
+              </div>
+            </div>
             </div>
           </div>
           <div class="card-second">
