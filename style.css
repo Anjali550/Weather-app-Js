@@ -126,7 +126,7 @@ input::placeholder {
   /* display: none; */
   display: block;
   background-color: #1f1f36;
-  width: 40%;
+  width: 30vw;
   height: 100vh;
 }
 nav {
@@ -260,7 +260,7 @@ nav {
 
 .right {
   background-color: #08081d;
-
+width:70vw;
   /* padding: 1rem 6rem; */
 }
 header {
