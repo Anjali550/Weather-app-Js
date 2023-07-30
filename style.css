@@ -30,7 +30,7 @@
   /* margin: 200px auto; */
   visibility:hidden;
   position: absolute;
-  z-index: 9999;
+  z-index: 2;
   /* margin:250px ; */
   top:40%;
   left:50%;
@@ -137,7 +137,7 @@ nav {
   float: right;
   border-radius: 50%;
   background-color: #79798e;
-  width: 5%;
+  width: 8%;
 
 }
 
@@ -171,27 +171,39 @@ nav {
   text-align: center;
 }
 .second p {
-  padding: 1rem 0;
+  padding: .7rem 0;
   color: #f0f8ff;
+  /* font-size: ; */
 }
 .second p:first-child {
   padding: 1rem 0;
   color: #f0f8ff;
-  font-size: 5rem;
+  font-size: 2rem;
 }
-
+.second span{
+  font-size: 6.5rem;
+}
 .ltext {
   font-size: 5rem;
 }
 .loc {
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
 
   display: flex;
   justify-content: center;
+  font-size: .9rem;
+  /* padding-bottom: 1rem; */
 }
-#temp{
+#cloud{
+  font-size: 1.7rem;
+}
+#dateDisplay{
+  padding-top: 2.5rem;
+  font-size: .9rem;
+}
+/* #temp{
   font-size: 20px;
-}
+} */
 /* -------range-bar-------- */
 
 
@@ -231,7 +243,7 @@ nav {
   content: "";
   display: block;
   background: rgb(244, 222, 56);
-  width: 79%;
+  width: 34%;
   height: 100%;
   border-radius: 6px;
   transition: width 1s ease 0s;
@@ -432,11 +444,14 @@ for responsive
     grid-template-columns: repeat(2, auto);
 
     gap: 10px;
-    padding: 1rem 3rem;
+    padding: 1rem 2.6rem;
   }
 
   .cards img {
     width: 80px;
+  }
+  .cards{
+    padding:1rem 1.2rem;
   }
 
   .left {
@@ -483,6 +498,9 @@ for responsive
   }
   .cloudB{
     width:100%;
+  }
+  .loader{
+    left:30%;
   }
   /* #temp{
     font-size: rem;
